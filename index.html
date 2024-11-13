@@ -1,0 +1,25 @@
+<!-- любой текст -->
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Тулашкин А. Список дел DEL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="tlstyle.css">
+        <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script defer src="scripts/tlscript.js"></script>
+        <script defer src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div class="block"><h3>ВЕРСТКА CSS И ПРОГРАММИРОВАНИЕ НА ЯЗЫКЕ JAVASCRIPT</h3>
+            <div id="app">
+                <input type="text" v-model="item"><!-- добовлять элемент в список массив -->
+                <button @click="addItem">Добавить тему ... </button>
+                <button @click="deleteItem(text)">Изученные ...</button>   
+                <ul>
+                    <li v-for="todo in todoList">{{todo.text}}</li><!-- прохождение по списку -->
+                </ul>
+            </div>
+        </div>    
+    </body>
+</html>
