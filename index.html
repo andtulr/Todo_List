@@ -14,8 +14,8 @@
         <div class="block"><h3>ВЕРСТКА CSS И ПРОГРАММИРОВАНИЕ НА ЯЗЫКЕ JAVASCRIPT</h3>
             <div id="app">
                 <input type="text" v-model="item"><!-- добовлять элемент в список массив -->
-                <button @click="addItem">Добавить тему ... </button>
-                <button @click="deleteItem(text)">Изученные ...</button>   
+                <button v-on:click="addItem">Добавить тему ... </button>
+                <button v-on:click="deleteItem(text)">Изученные ...</button>   
                 <ul>
                     <li v-for="todo in todoList">{{todo.text}}</li><!-- прохождение по списку -->
                 </ul>
